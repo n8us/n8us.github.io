@@ -27,6 +27,28 @@ body {
 header.site { padding: 40px 0 8px; }
 header.site h1 { margin: 0 0 6px; font-size: 2rem; line-height: 1.2; }
 header.site p { margin: 0; color: var(--muted); }
+.brand { display: flex; align-items: center; gap: 18px; }
+.brand > div { min-width: 0; }
+.logo {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  object-fit: contain;
+}
+.logo-sm { width: 72px; height: 72px; padding: 6px; border-radius: 16px; }
+.logo-link { display: inline-flex; flex: 0 0 auto; border-radius: 16px; }
+.logo-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 480px) {
+  header.site { padding-top: 28px; }
+  header.site h1 { font-size: 1.75rem; }
+  .brand { gap: 14px; align-items: flex-start; }
+  .logo { width: 72px; height: 72px; padding: 6px; border-radius: 16px; }
+  .logo-sm { width: 60px; height: 60px; }
+}
 nav { margin: 18px 0 0; display: flex; gap: 18px; font-size: .95rem; }
 a { color: var(--accent); }
 h2 { margin: 40px 0 10px; font-size: 1.35rem; line-height: 1.3; }
